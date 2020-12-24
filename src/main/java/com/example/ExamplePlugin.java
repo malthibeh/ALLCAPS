@@ -22,7 +22,7 @@ public class ExamplePlugin extends Plugin
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private AllCapsConfig config;
 
 	@Override
 	protected void startUp() throws Exception
@@ -46,8 +46,8 @@ public class ExamplePlugin extends Plugin
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+    AllCapsConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(AllCapsConfig.class);
 	}
 }
